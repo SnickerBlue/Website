@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Condiment&family=Love+Ya+Like+A+Sister&family=Rancho&family=Salsa&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -35,15 +36,43 @@
         </div>
 
         <div class="content">
-            <p>
-                You caught me!<br /><br />
-                There's nothing here.<br /><br />
-                YET!<br /><br />
-                <img class="uwu" src="Images/Face.png" />
-            </p>
+            <button class="accordion">Storyteller {Game}</button>
+            <div class="panel">
+                <p>
+                    An extremely well polished and cute little puzzle game.
+                    You get a prompt for what happens in the story and have to then accomplish the prompt with scenes and characters you drag on to a tiled story book page.
+                    Took me about 4 hours to 100% and by far my favorite part was attempting to make as many stories as I could as gay as possible.
+                    Nice game to waste a bit of time on.
+                </p>
+            </div>
+            <button class="accordion">Fallout {Show}</button>
+            <div class="panel">
+                <p>
+                    An excellent adaptation that’s overwhelmingly faithful to the lore and chock full of game references.
+                    The characters are great and the humor is on point. I highly recommend this show even if you haven’t played the games before; it’s just a really good show in general.
+                    Can’t wait for the second season.
+                </p>
+            </div>
         </div>
 
     </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 
 </body>
 

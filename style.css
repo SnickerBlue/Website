@@ -175,3 +175,50 @@ div.whatislove {
     bottom: 992px;
     font-size: 30px;
     font-family: 'Times New Roman';
+}
+
+.accordion {
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: black;
+    border: none;
+    outline: none;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .1s ease-out;
+}
+
+.panel p {
+    font-size: 80%;
+}
+
+.accordion:after {
+    background-image: url(Images/click1.svg);
+    background-size: 50px 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: relative;
+    top: 15px;
+}
+
+.active:after {
+    background-image: url(Images/click2.svg);
+    background-size: 50px 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: relative;
+    top: 15px;
+}
