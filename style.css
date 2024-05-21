@@ -222,3 +222,17 @@ div.whatislove {
     position: relative;
     top: 15px;
 }
+
+div.at_bat {
+    background-color: black;
+    color: white;
+    text-align: left;
+    margin: auto;
+    width: 850px;
+    height: 1650px;
+    border: 10px solid #be51f5;
+    position: relative;
+    bottom: 992px;
+    font-size: 30px;
+    font-family: 'Times New Roman';
+}
